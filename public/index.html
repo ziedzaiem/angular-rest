@@ -1,0 +1,49 @@
+<html ng-app="RestApp">
+<head>
+<title>angular-rest</title>
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular-resource/angular-resource.js"></script>
+
+<script src="script.js"></script>
+<link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+<div ng-controller="AppCtrl" >
+
+<form>
+  <fieldset>
+    <legend>Add new User:</legend>
+    <input type="text" placeholder="name" ng-model="newUser.name"><input type="text" placeholder="age" ng-model="newUser.age"><br>
+    <button ng-click="addUser()">Ajouter</button>
+  </fieldset>
+</form>
+
+<table border="1" width="100%">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th></th>
+  </tr>
+  <tr ng-repeat="user in users">
+    <td><span>{{user.id}}</span></td>
+    <td><span ng-show="!editMode[user.id]">{{user.name}}</span><input ng-show="editMode[user.id]" type="text" ng-model="updatedUser.name"/></td>
+    <td><span ng-show="!editMode[user.id]">{{user.age}}</span><input ng-show="editMode[user.id]" type="text" ng-model="updatedUser.age"/></td>
+    <td>
+      <button ng-show="!editMode[user.id]" ng-click="editMode[user.id]=true;updatedUser={name:user.name, age:user.age}">Modifier</button>
+      <button ng-show="editMode[user.id]" ng-click="updateUser(user, updatedUser);editMode[user.id]=false">Enregister</button>
+      <button ng-show="!editMode[user.id]" ng-click="deleteUser(user)">Supprimer</button>
+      <button ng-show="editMode[user.id]" ng-click="editMode[user.id]=false">Annuler</button>
+    </td>
+  </tr>
+</table>
+
+
+</div>
+
+<script>
+
+</script>
+</body>
+</html>

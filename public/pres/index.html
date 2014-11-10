@@ -1,0 +1,161 @@
+<!doctype html>
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>AngularJS et WS REST</title>
+    
+    <meta name="author" content="Zied Zaïem <zaiem.zied@gmail.com>" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+
+    <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
+        <span class="try"></span>
+        <h2 style="font-size: 80px;">AngularJS et Les web services REST</h2>
+        <span class="footnote"><sup></sup>Présenté par:<br/>Larbi Jirari & Zied Zaïem</span>
+    </div>
+
+    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
+		<ol style="list-style: initial;list-style-type: upper-roman;">
+		<li>Introduction</li>
+		<li>AngularJS et les WS REST</li>
+		<li>Démonstration Technique</li>
+		</ol>
+    </div>
+
+    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
+        <p><img src="img/AngularJS-large.png"<br/><br/><br/>
+        <span class="footnote" style="font-size:48px">Superheroic JavaScript  <br/><i>MVW</i> Framework</span></p>
+    </div>
+
+    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="90" data-scale="1"
+     style="width: 800px;">
+        <p><b style="font-size: 64px;">Model-View-Whatever</b> </br></br><sup>*</sup>whatever works for you</p>
+    </div>
+
+    <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
+        <p><img src="img/shema1.png"/></p>
+    </div>
+
+    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6" style="width:700px">
+    <p style="font-size : 36px">L’injection de dépendances est un design pattern logiciel qui traite la façon dont les composants gèrent leurs dépendances.</p>
+        <br/><p style="font-size: 36px;width:700px">someModule.controller('MyController', ['$scope', 'dep1', 'dep2', function($scope, dep1, dep2) {<br/>
+		&nbsp;&nbsp;&nbsp;$scope.aMethod = function() {<br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ... <br/>
+		&nbsp;&nbsp;&nbsp;}<br/>
+		}]);
+		</p>
+    </div>
+
+    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="1" style="width: 800px;">
+        <br/><br/><table style="font-size: 24px;">
+        <tr style="text-align:center;font-weight:bold"><td>Services</td><td>Factory</td></tr>
+        <tr>
+        <td width="50%" style="padding:20px">
+	        <ul>
+		        <li>Objets liés grâce à la DI</li><br/>
+		        <li>Lazily instantiated : Instancié uniquement lorsqu’un autre composant en dépend
+					Singletons : chaque composant dépendant d’un service reçoit la référence vers l’unique instance</li><br/>
+		        <li>Exemple: $http</li>
+	        </ul>
+        </td>
+        <td width="50%"  style="padding:20px">
+        <ul>
+        	<li>Usine à Objets</li><br/>
+	        <li>Attributs</li>
+	        <li>Méthodes</li><br/>
+	        <li>Exemple: $resource</li>
+        </ul>
+        </td>
+        </tr>
+        </table>
+    </div>
+
+    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="4">
+        <p><img src="img/shema3.png"/></p>
+    </div>
+
+    <div id="its-in-3d" class="step" data-x="6200" data-y="6300" data-z="-500" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+		<img src="img/shema4.png"/>
+    </div>
+    
+    
+    <div id="its-in-3d2" class="step" data-x="8200" data-y="8300" data-z="-1000" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+		<p><b style="font-size: 250px;line-height: 250px;">AJAX</b><br/>
+		    <ul>
+        	<li>XMLHttpRequest</li>
+	        <li>jQuery.ajax()</li>
+	        <li>$http</li>
+        	</ul>
+		</p>
+    </div>
+    
+    
+    <div id="one-more-thing3" class="step" data-x="6000" data-y="4000" data-scale="4">
+        <p><img src="img/shema3.png"/></p>
+    </div>
+    
+    <div id="resource" class="step" data-x="12000" data-y="4000" data-scale="4">
+    	<h2 style="font-weight:bold;">$resource</h2>
+        <p style="font-size: 36px;">A factory which creates a resource object that lets you interact with RESTful server-side data sources.</p>
+        <br/><br/>
+        <p style="font-size: 32px;">
+        	var User = $resource('/user/:userId', {userId:'@id'});<br/>
+			var user = User.get({userId:123}, function() {<br/>
+			&nbsp;&nbsp;&nbsp;user.abc = true;<br/>
+			&nbsp;&nbsp;&nbsp;user.$save();<br/>
+			});
+        
+        </p>
+    </div>
+    
+    <div id="securite" class="step" data-x="12000" data-y="4000" data-scale="4" data-z="-1000" data-rotate-x="-90" data-rotate-y="90">
+        <p>
+    	<h2 style="font-weight:bold;">Sécurité</h2><br/>
+        	<ul style="list-style: initial;">
+	        	<li>Cookies Vs Tokens</li>
+		        <li><a href="https://auth0.com/blog/2014/01/07/angularjs-authentication-with-cookies-vs-token/">https://auth0.com/blog/2014/01/07/angularjs-authentication-with-cookies-vs-token/</a></li>
+		        <li>JSON Web Token (JWT)</li>
+        	</ul>			
+        </p>
+    </div>
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="15">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
+
