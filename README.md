@@ -17,3 +17,6 @@ node index.js
 
 #presentation
 see public/pres directory
+
+Version PowerPoint
+* https://onedrive.live.com/redir?resid=85AD64BD14A9332A%21453
