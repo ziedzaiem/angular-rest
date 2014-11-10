@@ -8,6 +8,9 @@ A very super simple example of an AngularJS web app communicating with a REST We
 #run
 node index.js
 
+# Java Client
+* https://github.com/laroox/ConsumeWebServiceJEE
+
 # some usefull links
 * https://docs.angularjs.org/api/ngResource/service/$resource
 * http://www.restapitutorial.com/lessons/httpmethods.html
