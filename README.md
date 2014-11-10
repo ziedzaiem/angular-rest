@@ -17,4 +17,4 @@ node index.js
 
 
 #presentation
-see /pres directory
+see public/pres directory
